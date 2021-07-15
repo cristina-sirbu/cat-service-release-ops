@@ -9,9 +9,12 @@ configMapGenerator:
   - name: cat-service-config
     files:
       - application.properties
+  - name: catty-config
+    literals:
+      - KITTY=cat
 
 images:
   - name: gcr.io/pgtm-jlong/cat-service # used for Kustomize matching
     newTag: latest
-    newName: MY_REGISTRY/cat-service
+    newName: eduk8s-labs-w01-s106-registry.s1tour-july-prod-86481b7.tanzu-labs.esp.vmware.com/cat-service
   
